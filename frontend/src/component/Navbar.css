@@ -1,0 +1,204 @@
+/* Navbar container */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  padding: 0 20px;
+  background-color: red; /* Red background */
+  color: white; /* White text */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+/* Logo */
+.logo {
+  display: flex;
+  flex-direction: row; /* stack vertically */
+  align-items: center;    /* center horizontally */
+  cursor: pointer;
+  gap: 4px;  
+}
+
+.logo h2 {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: white;
+  margin: 0; /* remove extra margin */
+}
+
+.logo img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  margin: 0; /* reset */
+}
+
+
+/* Navbar list */
+.navbar-list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+}
+
+/* Navbar items */
+.navbar-list li {
+  list-style: none;
+  font-size: 17px;
+  font-weight: 500;
+  margin-left:12px;
+}
+
+.navbar-list li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-list li a:hover {
+  color: black; /* Gold hover effect */
+}
+
+/* Dropdown */
+.select-container {
+  margin-left: 10px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: white; /* White dropdown */
+  font-size: 15px;
+  font-weight: 500;
+  color: red; /* Red text inside dropdown */
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.select-container:hover {
+  background-color: #f5f5f5;
+}
+
+
+/* Wallet Button */
+.wallet-btn {
+  padding: 8px 18px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.wallet-btn:hover {
+  background: white;
+  color: red;
+}
+
+/* Hide hamburger icon by default */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* 📱 Mobile Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-list {
+    display: none; /* hide menu by default on mobile */
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* just below navbar */
+    right: 0;
+    width: 220px;
+    background-color: red;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .navbar-list.active {
+    display: flex; /* show when menu is toggled */
+  }
+
+  .menu-icon {
+    display: block; /* show hamburger only on mobile */
+  }
+}
+
+/* /Mobile Responsive Navbar */
+@media (max-width: 768px) {
+
+  /* Navbar container wraps content and height auto */
+  .navbar-container {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 10px 20px;
+    position: relative; /* important for absolute menu */
+  }
+
+  /* Show hamburger icon */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Navbar list hidden by default */
+  .navbar-list {
+    display: none; /* hidden initially */
+    flex-direction: column; /* stack links vertically */
+    position: absolute; /* overlay menu */
+    top: 70px; /* below navbar */
+    right: 0;
+    width: 220px;
+    background-color: red;
+    padding: 15px;
+    gap: 15px;
+    border-radius: 8px;
+    z-index: 999; /* stay above other content */
+  }
+
+  /* Show menu when active */
+  .navbar-list.active {
+    display: flex;
+  }
+
+  /* List items full width */
+  .navbar-list li {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  /* Dropdown full width and smaller font */
+  .select-container {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  /* Wallet button full width */
+  .wallet-btn {
+    width: 100%;
+    margin-top: 5px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Reduce logo text size for mobile */
+  .logo h2 {
+    font-size: 22px;
+  }
+
+  /* Adjust logo image size */
+  .logo img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,0 +1,161 @@
+.process-container {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #f0f4f8, #d9e4ec); /* soft gray/blue background */
+  color: #222;
+}
+
+.process-container h2 {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+
+.process-container h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #b30000; /* red underline */
+  border-radius: 2px;
+}
+
+
+.role-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.role-card {
+  background: white;
+  border-radius: 50%;
+  width: 270px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.role-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.role-icon {
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+  color: #b30000;
+}
+
+.role-card h4 {
+  margin: 5px 0;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.role-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+.role-card:hover .role-icon {
+  color:red;
+}
+.arrow {
+  font-size: 5rem;
+  color: #b30000;
+  cursor: pointer;
+}
+.arrow:hover{
+  color:red;
+}
+
+/* resopnsive design */
+/* Tablet screens: max-width 900px */
+@media screen and (max-width: 900px) {
+  .process-container {
+    padding: 40px 15px;
+  }
+
+  .process-container h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .role-container {
+    gap: 25px;
+  }
+
+  .role-card {
+    width: 220px;
+    height: 220px;
+  }
+
+  .role-icon {
+    font-size: 2.3rem;
+  }
+
+  .role-card h4 {
+    font-size: 1.2rem;
+  }
+
+  .role-card p {
+    font-size: 0.95rem;
+  }
+
+  .arrow {
+    font-size: 4rem;
+  }
+}
+
+/* Mobile screens: max-width 600px */
+@media screen and (max-width: 600px) {
+  .process-container {
+    padding: 30px 10px;
+  }
+
+  .process-container h2 {
+    font-size: 1.7rem;
+    margin-bottom: 20px;
+  }
+
+  .role-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .role-card {
+    width: 180px;
+    height: 180px;
+  }
+
+  .role-icon {
+    font-size: 2rem;
+  }
+
+  .role-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .role-card p {
+    font-size: 0.2rem;
+  }
+
+  .arrow {
+    font-size: 3rem;
+  }
+}

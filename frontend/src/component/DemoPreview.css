@@ -1,0 +1,180 @@
+/* DemoPreview.css */
+
+/* Section styling */
+.demo-section {
+  padding: 80px 20px;
+  background: #f5f7fa; /* Light professional background */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Container */
+.demo-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Section title */
+.demo-title {
+ font-size: 2.3rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+}
+.demo-title::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: #b30000; /* red underline */
+  border-radius: 2px;
+}
+
+.demo-subtitle {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 50px;
+}
+
+/* Individual demo cards */
+.demo-preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 60px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.demo-preview:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Info section */
+.demo-info {
+  flex: 1;
+  padding: 40px;
+  text-align: left;
+}
+
+.demo-info h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.demo-info p {
+  font-size: 1.2rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Image section */
+.demo-image-wrapper {
+  flex: 1;
+  overflow: hidden;
+}
+
+.demo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.demo-preview:hover .demo-image {
+  transform: scale(1.05);
+}
+
+/* Alternate layout for every second demo */
+.demo-preview:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* resopnsive design */
+/* Already existing responsive for max-width 900px */
+@media screen and (max-width: 900px) {
+  .demo-preview {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .demo-preview:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .demo-info {
+    padding: 30px 20px;
+  }
+
+  .demo-info h3 {
+    font-size: 1.5rem; /* smaller heading on tablet/mobile */
+  }
+
+  .demo-info p {
+    font-size: 1rem; /* smaller text */
+  }
+
+  .demo-image-wrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .demo-image {
+    height: auto; /* make image scale */
+  }
+
+  .demo-title {
+    font-size: 2rem; /* smaller section title */
+  }
+
+  .demo-subtitle {
+    font-size: 1rem; /* smaller subtitle */
+    margin-bottom: 30px;
+  }
+
+  .demo-container {
+    padding: 0 15px; /* reduce container padding */
+  }
+
+  .demo-preview {
+    margin-bottom: 40px; /* reduce spacing between cards */
+  }
+}
+
+/* For mobile screens < 600px */
+@media screen and (max-width: 600px) {
+  .demo-info {
+    padding: 20px 10px;
+  }
+
+  .demo-info h3 {
+    font-size: 1.3rem;
+  }
+
+  .demo-info p {
+    font-size: 0.95rem;
+  }
+
+  .demo-title {
+    font-size: 1.7rem;
+  }
+
+  .demo-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+  }
+
+  .demo-preview {
+    margin-bottom: 30px;
+  }
+}

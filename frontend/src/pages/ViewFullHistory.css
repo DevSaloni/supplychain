@@ -1,0 +1,228 @@
+/* ==== Main Container ==== */
+.product-detail-container {
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 40px 60px;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+/* ==== History Button ==== */
+.history-btn {
+  background: #e63946; /* theme red */
+  color: #fff;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 20px 0 40px;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.15);
+  display: inline-block;
+}
+
+.history-btn:hover {
+  background: #d62828;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 14px rgba(0,0,0,0.25);
+}
+
+.history-btn:active {
+  transform: scale(0.96);
+}
+
+/* ==== Each row acts like a form field ==== */
+.product-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  border-bottom: 1px dashed #ddd;
+  padding-bottom: 10px;
+}
+
+.product-row:last-child {
+  border-bottom: none;
+}
+
+.product-row p {
+  font-size: 15px;
+  color: #333;
+  margin: 0;
+}
+
+.product-row strong {
+  color: #e63946;
+  font-weight: 600;
+}
+
+.total-price strong {
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ==== Section Titles ==== */
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1d3557;
+  margin: 40px 0 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::before {
+  content: "|";
+  color: #e63946;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* ==== Card Style ==== */
+.product-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.08);
+  margin-top: 15px;
+}
+
+/* ==== Timeline ==== */
+.timeline {
+  position: relative;
+  margin-top: 20px;
+  padding-left: 40px;
+  border-left: 3px solid #ddd;
+}
+
+.timeline-step {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-step .dot {
+  position: absolute;
+  left: -13px;
+  top: 10px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Colored Dots */
+.timeline-step .dot.manufacturer {
+  background: #1d3557; /* blue */
+}
+.timeline-step .dot.transporter {
+  background: #e9c46a; /* yellow */
+}
+.timeline-step .dot.retailer {
+  background: #2a9d8f; /* green */
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+}
+
+.timeline-content h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1d3557;
+}
+
+.timeline-content p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #444;
+}
+
+/* ==== Responsive ==== */
+
+/* Tablet: max-width 900px */
+@media screen and (max-width: 900px) {
+  .product-detail-container {
+    padding: 30px 40px;
+  }
+
+  .product-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .product-row p {
+    text-align: left;
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 22px;
+  }
+
+  .timeline {
+    padding-left: 30px;
+  }
+}
+
+/* Mobile: max-width 600px */
+@media screen and (max-width: 600px) {
+  .product-detail-container {
+    padding: 20px 15px;
+  }
+
+  .history-btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px 0;
+    font-size: 15px;
+  }
+
+  .product-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-row strong,
+  .product-row p {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  .product-card {
+    padding: 20px;
+  }
+
+  .timeline {
+    padding-left: 20px;
+  }
+
+  .timeline-step .dot {
+    left: -10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .timeline-content {
+    padding: 12px 15px;
+  }
+
+  .timeline-content h4 {
+    font-size: 15px;
+  }
+
+  .timeline-content p {
+    font-size: 13px;
+  }
+}
