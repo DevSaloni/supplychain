@@ -3,6 +3,13 @@
 A blockchain-based platform to track the entire supply chain from manufacturer to retailer. This project ensures **transparency, verification, and accountability** at each stage using Ethereum smart contracts.
 
 ---
+## Demo
+![HomePage](screenshots/Home.PNG)
+![Product-Record](screenshots/product-record.PNG)
+![Product-Record](screenshots/product-record2.PNG)
+![Product-Record](screenshots/product-timeline.PNG)
+![product-search](screenshots/product-search.PNG)
+
 
 ## 🚀 Project Overview
 
